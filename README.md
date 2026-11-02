@@ -70,6 +70,12 @@ adb shell pm enable <nombre_del_paquete>
 
 ---
 
+## 📸 Resultado Final (Pantalla de Inicio con Nova Launcher Prime)
+
+<p align="center">
+  <img src="assets/nova_launcher_preview.jpg" alt="Nova Launcher Prime Setup" width="360" style="border-radius: 18px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+</p>
+
 ## 🌟 Instalación de Nova Launcher Prime
 
 El repositorio incluye el APK de **Nova Launcher Prime v8.8.6** en la carpeta `apps/`. Puedes instalarlo directamente en el dispositivo conectado mediante:
