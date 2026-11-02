@@ -30,7 +30,6 @@ Incluye el instalador optimizado de **Nova Launcher Prime (v8.8.6)** para sustit
 
 > 📺 **Video Tutorial Completo:** Puedes reproducir o descargar el video explicativo directamente en [](assets/Android_Debloat_Toolbox.mp4).
 >
-> 📖 **Guía y Guion Técnico:** Tienes también disponible la **[Guía y Guion Técnico Minuto a Minuto para Video](TUTORIAL_Y_GUION_VIDEO.md)** con capturas detalladas de terminal y explicaciones punto por punto.
 
 ---
 
@@ -46,7 +45,6 @@ El agente ejecutará los comandos automáticamente, comprobará la estabilidad d
 
 ---
 
-¿Quieres ver cómo aplicarlo o explicárselo a tus amigos? Tienes la **[Guía y Guion Técnico Minuto a Minuto para Video](TUTORIAL_Y_GUION_VIDEO.md)** con capturas ilustradas de cada paso.
 
 ---
 
