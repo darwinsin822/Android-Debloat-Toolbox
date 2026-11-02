@@ -1,5 +1,9 @@
 # 🎬 Guía Completa & Guion para Video Tutorial: Debloat Android + Nova Launcher
 
+<p align="center">
+  <img src="assets/infografia_guia_debloat.jpg" alt="Infografía Guía de Debloat" width="100%" style="border-radius: 12px;">
+</p>
+
 > **Repositorio Oficial:** [https://github.com/darwinsin822/Android-Debloat-Toolbox](https://github.com/darwinsin822/Android-Debloat-Toolbox)  
 > **Objetivo:** Liberar memoria RAM, eliminar publicidad y rastreo sin root y sin perder llamadas ni contactos, dejando el móvil con Nova Launcher Prime.
 

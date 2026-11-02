@@ -1,5 +1,9 @@
 # 📱 Android Universal Debloat & Optimization Toolbox
 
+<p align="center">
+  <img src="assets/infografia_guia_debloat.jpg" alt="Guía de Debloat para Android sin Root" width="100%" style="border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,0.4);">
+</p>
+
 Herramienta universal de código abierto diseñada para auditar, limpiar y deshabilitar bloatware, adware y telemetría de fábrica en dispositivos móviles Android (smartphones y tablets), con **garantía de reversibilidad total al 100%**.
 
 Incluye el instalador optimizado de **Nova Launcher Prime (v8.8.6)** para sustituir launchers pesados del fabricante.
