@@ -1,0 +1,39 @@
+PROYECTO: ANDROID DEBLOAT TOOLBOX & OPTIMIZACIÓN TOTAL
+Repositorio GitHub: https://github.com/darwinsin822/Android-Debloat-Toolbox
+Autor: Darwin Sin (darwinsin822)
+
+1. EL PROBLEMA DE LOS MÓVILES ANDROID DE FÁBRICA
+Muchos teléfonos móviles de marcas reconocidas como Tecno, Infinix, Xiaomi, Samsung u otros fabricantes vienen saturados de fábrica con aplicaciones conocidas como "Bloatware". Esto incluye:
+- Telemetría y rastreadores invisibles que recopilan datos sobre cómo usas el teléfono y los envían a servidores extranjeros.
+- Servicios ocultos de publicidad invasiva que descargan anuncios en pantalla de bloqueo, barras laterales y notificaciones.
+- Tiendas alternativas de aplicaciones que se ejecutan en segundo plano consumiendo datos móviles, memoria RAM y desgastando la batería en reposo.
+- Paquetes de Facebook y Meta preinstalados como aplicaciones de sistema que no se pueden desinstalar normalmente desde Ajustes.
+
+2. LA SOLUCIÓN TÉCNICA: ANDROID DEBLOAT TOOLBOX
+El proyecto Android Debloat Toolbox es una herramienta universal de código abierto desarrollada en Python y basada en el protocolo ADB (Android Debug Bridge).
+Permite conectar cualquier smartphone Android a una computadora (vía cable USB o mediante Wi-Fi con depuración inalámbrica) y realizar una limpieza quirúrgica de hasta 46 procesos no deseados.
+
+3. LA REGLA DE ORO DE COMUNICACIONES: PROTECCIÓN TOTAL
+Uno de los mayores errores de los tutoriales de internet es que borran componentes del sistema a ciegas, provocando que los usuarios se queden sin poder hacer llamadas telefónicas ni acceder a sus contactos.
+Android Debloat Toolbox implementa por código la "Regla de Oro":
+- NUNCA toca el marcador telefónico (dialer), la libreta de contactos (contacts), los mensajes SMS ni los servicios de llamadas de emergencia.
+- Tu teléfono mantiene su funcionalidad de llamadas al 100%.
+
+4. SEGURIDAD Y REVERSIBILIDAD TOTAL EN 1 SEGUNDO
+A diferencia de métodos destructivos que eliminan archivos del sistema o requieren acceso ROOT (lo cual invalida la garantía y puede romper las actualizaciones del sistema):
+- La herramienta utiliza comandos seguros a nivel de usuario: "pm disable-user --user 0".
+- En cada ejecución genera un archivo de respaldo fechado en formato JSON.
+- Si en cualquier momento deseas reactivar una aplicación o dejar el móvil tal como vino de fábrica, basta con ejecutar un único comando:
+  "python3 debloater.py restore --file <archivo_de_respaldo>.json"
+  y todos los paquetes vuelven a estar activos al instante, sin formatear ni reiniciar.
+
+5. INSTALACIÓN DE NOVA LAUNCHER PRIME
+Para completar la transformación del móvil, el repositorio incluye directamente en su carpeta de aplicaciones el instalador de Nova Launcher Prime v8.8.6.
+Permite sustituir los launchers pesados y lentos del fabricante por una interfaz ultra fluida, rápida, con soporte para paquetes de iconos personalizados y fondos de pantalla limpios sin publicidad.
+
+6. PASO A PASO PARA EL USUARIO
+Paso 1: Activar Opciones de Desarrollador tocando 7 veces en Número de compilación y activar Depuración Inalámbrica.
+Paso 2: Conectar desde la PC usando "adb pair" con el código de 6 dígitos y luego "adb connect".
+Paso 3: Ejecutar "python3 debloater.py debloat --profile tecno_infinix" (o el perfil de tu marca).
+Paso 4: Instalar Nova Launcher con "python3 debloater.py install-nova".
+Resultado: Un teléfono más rápido, con más memoria RAM libre, mayor duración de batería y control total sobre tu privacidad.
