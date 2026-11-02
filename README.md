@@ -18,6 +18,14 @@ Incluye el instalador optimizado de **Nova Launcher Prime (v8.8.6)** para sustit
 
 ---
 
+## ☁️ Recursos en la Nube (Google Drive)
+
+> 📂 **Carpeta Oficial con Recursos y Archivos Multimedia:**  
+> [Acceder a la carpeta en Google Drive](https://drive.google.com/drive/folders/1gjXkjA-8SCzehybAMZIF6RkI8mMDOWZi?usp=sharing)  
+> *(Disponible también en el documento [assets/ENLACES_Y_DESCARGAS.md](assets/ENLACES_Y_DESCARGAS.md))*
+
+---
+
 ## 🎥 Videotutorial Oficial (MP4) y Guía Paso a Paso
 
 > 📺 **Video Tutorial Completo:** Puedes reproducir o descargar el video explicativo directamente en [](assets/Android_Debloat_Toolbox.mp4).
