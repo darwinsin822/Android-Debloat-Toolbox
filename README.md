@@ -18,7 +18,25 @@ Incluye el instalador optimizado de **Nova Launcher Prime (v8.8.6)** para sustit
 
 ---
 
-## 🎥 Videotutorial y Guía Paso a Paso
+## 🎥 Videotutorial Oficial (MP4) y Guía Paso a Paso
+
+> 📺 **Video Tutorial Completo:** Puedes reproducir o descargar el video explicativo directamente en [](assets/Android_Debloat_Toolbox.mp4).
+>
+> 📖 **Guía y Guion Técnico:** Tienes también disponible la **[Guía y Guion Técnico Minuto a Minuto para Video](TUTORIAL_Y_GUION_VIDEO.md)** con capturas detalladas de terminal y explicaciones punto por punto.
+
+---
+
+## 🤖 ¿Cómo ejecutarlo aún más fácil con IA? (Antigravity, Claude Code, Codex, OpenCode)
+
+No necesitas escribir comandos manuales en la terminal si usas un asistente de código con soporte de herramientas (como **Google Antigravity**, **Claude Code**, **Codex**, **OpenCode CLI**, etc.).
+
+¡El asistente puede hacer todo el proceso por ti! Simplemente dile:
+
+> *"Conéctate a mi móvil por ADB (IP 192.168.100.X), detecta mi modelo con debloater.py, ejecuta la limpieza según mi fabricante respetando la regla de oro de telefonía y contactos, y luego instálame Nova Launcher Prime."*
+
+El agente ejecutará los comandos automáticamente, comprobará la estabilidad del dispositivo y te entregará el reporte final en segundos sin que tengas que teclear nada.
+
+---
 
 ¿Quieres ver cómo aplicarlo o explicárselo a tus amigos? Tienes la **[Guía y Guion Técnico Minuto a Minuto para Video](TUTORIAL_Y_GUION_VIDEO.md)** con capturas ilustradas de cada paso.
 
