@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
 Android Universal Debloat & Optimization Tool
-Compatible with Android 8 to 15+ (Fire OS, HiOS, OneUI, MIUI/HyperOS, ColorOS, OxygenOS, RealUI, Motorola, Pixel).
+Compatible with Android 8 to 15+ (HiOS, OneUI, MIUI/HyperOS, ColorOS, OxygenOS, RealUI, Motorola, Pixel).
+Strict Golden Rule: NEVER touch phone dialers, contacts, SMS, telephony, or emergency services.
 """
 
 import argparse
@@ -11,7 +12,8 @@ import os
 import subprocess
 import sys
 
-# Manufacturer Database & Bloatware Lists
+# Manufacturer Database & Bloatware Lists (Purely Mobile Devices)
+# CRITICAL RULE: NO Phone dialers (com.sh.smart.caller, dialer, contacts), NO Telephony, NO SMS
 DEBLOAT_PROFILES = {
     "tecno_infinix": {
         "name": "Tecno / Infinix / Itel (Transsion HiOS / XOS)",
@@ -51,7 +53,6 @@ DEBLOAT_PROFILES = {
             "com.talpa.hibrowser",
             "com.talpa.hiservice",
             "com.rlk.weathers",
-            "com.sh.smart.caller",
             "com.transsion.repaircard",
             "com.transsion.cloudserver",
             "com.transsion.thunderback",
@@ -62,25 +63,6 @@ DEBLOAT_PROFILES = {
             "com.facebook.services",
             "com.facebook.system",
             "com.transsion.carlcare"
-        ]
-    },
-    "amazon_firetv": {
-        "name": "Amazon Fire TV & Fire Tablets (Fire OS)",
-        "packages": [
-            "com.amazon.device.sale.service",
-            "com.amazon.tarkin",
-            "com.amazon.whisperplay.contracts",
-            "com.amazon.shpm",
-            "com.amazon.visualservice",
-            "com.amazon.advertising.service",
-            "com.amazon.kor.tz",
-            "com.amazon.recess",
-            "com.amazon.bueller.music",
-            "com.amazon.bueller.photos",
-            "com.amazon.ftv.screensaver",
-            "com.amazon.device.crashmanager",
-            "com.amazon.tv.settings.v2",
-            "com.amazon.ods.kindleconnect"
         ]
     },
     "xiaomi": {
@@ -124,6 +106,19 @@ DEBLOAT_PROFILES = {
     }
 }
 
+# REGLA DE ORO DE COMUNICACIONES — Paquetes y patrones estrictamente protegidos
+PROTECTED_KEYWORDS = [
+    "dialer", "telephony", "contact", "phone", "telecom", "call", 
+    "mms", "sms", "messaging", "emergency", "ril"
+]
+
+def is_strictly_protected(pkg):
+    pkg_lower = pkg.lower()
+    for kw in PROTECTED_KEYWORDS:
+        if kw in pkg_lower:
+            return True
+    return False
+
 def run_adb(cmd, device=None):
     dev_flag = f"-s {device}" if device else ""
     full_cmd = f"adb {dev_flag} {cmd}".strip()
@@ -155,7 +150,7 @@ def debloat(profile_key, device=None):
         return
 
     profile = DEBLOAT_PROFILES[profile_key]
-    print(f"\n[+] Iniciando debloat para: {profile['name']}")
+    print(f"\n[+] Iniciando debloat seguro para: {profile['name']}")
     installed = list_installed_packages(device)
     
     timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -170,6 +165,12 @@ def debloat(profile_key, device=None):
     }
 
     for pkg in profile["packages"]:
+        # Validación de la Regla de Oro
+        if is_strictly_protected(pkg):
+            print(f"  [🛡️ PROTEGIDO] Omitido por regla de oro de telefonía/contactos: {pkg}")
+            backup_data["skipped_packages"].append(pkg)
+            continue
+
         if pkg in installed:
             code, out, err = run_adb(f"shell pm disable-user --user 0 {pkg}", device)
             if code == 0 or "disabled" in out.lower() or "new state" in out.lower():

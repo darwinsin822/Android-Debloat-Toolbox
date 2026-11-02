@@ -41,7 +41,6 @@
 | `com.talpa.hibrowser` | HiBrowser — navegador Transsion con rastreo |
 | `com.talpa.hiservice` | Servicio de HiBrowser |
 | `com.rlk.weathers` | App de clima preinstalada |
-| `com.sh.smart.caller` | Smart Caller ID — datos a servidores externos |
 | `com.scorpio.securitycom` | Seguridad de Transsion con telemetría |
 | `com.transsion.repaircard` | Diagnóstico de reparación — telemetría |
 | `com.transsion.cloudserver` | Servidor cloud Transsion |
@@ -116,3 +115,8 @@
 | `com.google.android.gms` | Google Play Services |
 | `com.google.android.gsf` | Google Services Framework |
 | `tech.palm.id` | Palm ID |
+
+---
+
+## 🛡️ Regla de Oro: Telefonía y Contactos Intactos
+- `com.sh.smart.caller` y marcadores nativos quedan **estrictamente excluidos** de cualquier debloat para preservar llamadas, agenda de contactos e historial nativo.

@@ -1,19 +1,26 @@
 # 📱 Android Universal Debloat & Optimization Toolbox
 
-Herramienta universal de código abierto diseñada para auditar, limpiar y deshabilitar bloatware, adware y telemetría de fábrica en cualquier dispositivo Android (móviles, tablets y Fire TV Stick), con **garantía de reversibilidad total al 100%**.
+Herramienta universal de código abierto diseñada para auditar, limpiar y deshabilitar bloatware, adware y telemetría de fábrica en dispositivos móviles Android (smartphones y tablets), con **garantía de reversibilidad total al 100%**.
 
 Incluye el instalador optimizado de **Nova Launcher Prime (v8.8.6)** para sustituir launchers pesados del fabricante.
 
 ---
 
+## 🛡️ REGLA DE ORO DE COMUNICACIONES (PROTECCIÓN ESTRICTA)
+
+> [!IMPORTANT]
+> **Protección absoluta de apps de Teléfono, Marcador, Contactos y SMS:**
+> Esta herramienta tiene prohibido de forma determinista modificar o deshabilitar cualquier componente relacionado con llamadas telefónicas, libreta de contactos, mensajería SMS y servicios de emergencia (como `com.sh.smart.caller`, marcadores del fabricante o servicios de red celular). Tu teléfono nunca perderá la capacidad de hacer llamadas ni gestionar contactos de forma nativa.
+
+---
+
 ## 🚀 Características Principales
 
-- **Universal:** Compatible con Android 8.0 hasta Android 14 / 15+ (incluyendo Fire OS, HiOS, One UI, HyperOS/MIUI, ColorOS, etc.).
+- **Universal para Móviles:** Compatible con Android 8.0 hasta Android 14 / 15+ (HiOS, XOS, One UI, HyperOS/MIUI, ColorOS, etc.).
 - **100% Reversible y Seguro:** Utiliza `pm disable-user --user 0` en lugar de borrados destructivos de partición. Nunca rompe OTAs ni provoca bootloops.
 - **Auditoría y Respaldo Automático:** Genera un archivo `.json` de respaldo fechado con cada paquete desactivado para restaurar en 1 solo comando.
 - **Perfiles de Fabricante Incluidos:**
-  - 🟢 **Tecno / Infinix / Itel:** HiOS / XOS (46 paquetes de telemetría agresiva Transsion neutralizados).
-  - 🔥 **Amazon Fire TV:** Fire OS 7 y 8 (publicidad de pantalla de inicio y telemetría KSO desactivados sin tocar Prime Video ni Luna).
+  - 🟢 **Tecno / Infinix / Itel:** HiOS / XOS (Telemetría de ventas, ads y trackers Transsion neutralizados).
   - 🔵 **Xiaomi / Redmi / POCO:** MIUI / HyperOS (Joyose, MSA Ads, Analytics).
   - 🟣 **Samsung:** One UI (Bixby, Samsung Pay bloatware).
   - 🌐 **Meta / Facebook:** Servicios de instalación y rastreo en segundo plano preinstalados en el sistema.
@@ -23,7 +30,7 @@ Incluye el instalador optimizado de **Nova Launcher Prime (v8.8.6)** para sustit
 ## 📦 Requisitos Previos
 
 1. **ADB Platform Tools** instalado en tu PC (Linux, macOS o Windows).
-2. **Depuración USB** o **Depuración Inalámbrica (Wireless Debugging)** activada en el móvil/dispositivo:
+2. **Depuración USB** o **Depuración Inalámbrica (Wireless Debugging)** activada en el móvil:
    - *Ajustes* → *Información del teléfono* → Tocar 7 veces en *Número de compilación*.
    - *Opciones de desarrollador* → Activar *Depuración USB* o *Depuración Inalámbrica*.
 
@@ -43,9 +50,6 @@ Selecciona el perfil según la marca de tu dispositivo:
 # Para móviles Tecno, Infinix o Itel:
 python3 debloater.py debloat --profile tecno_infinix
 
-# Para Amazon Fire TV Stick / Fire Tablets:
-python3 debloater.py debloat --profile amazon_firetv
-
 # Para Xiaomi, Redmi o POCO:
 python3 debloater.py debloat --profile xiaomi
 
@@ -57,7 +61,7 @@ python3 debloater.py debloat --profile samsung
 Si necesitas reactivar alguna aplicación o devolver el dispositivo a su estado original de fábrica:
 
 ```bash
-python3 debloater.py restore --file backup_debloat_tecno_infinix_20261101_205653.json
+python3 debloater.py restore --file backup_debloat_tecno_infinix_YYYYMMDD_HHMMSS.json
 ```
 O de forma manual por paquete:
 ```bash
@@ -80,13 +84,14 @@ adb install -r apps/Nova-Launcher-8.8.6-Prime.apk
 
 ---
 
-## 🛡️ Lista de Paquetes Protegidos (Regla de Oro)
+## 🛡️ Lista de Paquetes Protegidos
 
 Esta herramienta **NUNCA** toca los componentes críticos del sistema operativo:
-- Framework base (`android`, `com.google.android.gms`, `com.google.android.gsf`).
-- Drivers y módulos de cámara, audio DTS y pantalla.
-- Sensores biométricos (huella dactilar `fpsensor` y reconocimiento facial).
-- Modems, telefonía y llamadas de emergencia (`com.mediatek.*`).
+- **Telefonía y Contactos:** Marcadores (`dialer`, `caller`, `telecom`, `contacts`), SMS/MMS y llamadas de emergencia.
+- **Framework base:** `android`, `com.google.android.gms`, `com.google.android.gsf`.
+- **Hardware y Multimedia:** Drivers y módulos de cámara, audio DTS y pantalla.
+- **Seguridad biométrica:** Sensores de huella dactilar (`fpsensor`) y reconocimiento facial.
+- **Bajas capas del SoC:** Modems y procesadores base (`com.mediatek.*` / `com.qualcomm.*`).
 
 ---
 
