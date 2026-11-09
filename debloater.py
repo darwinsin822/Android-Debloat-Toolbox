@@ -96,6 +96,38 @@ DEBLOAT_PROFILES = {
             "com.sec.android.app.sbrowser"
         ]
     },
+    "horizon_x_tv": {
+        "name": "Horizon X: Smart TV & Amazon Fire OS (AFTKM / Android TV)",
+        "packages": [
+            "com.amazon.dp.logger",
+            "com.amazon.tmm.tutorial",
+            "com.amazon.storm.lightning.tutorial",
+            "com.amazon.wirelessmetrics.service",
+            "com.amazon.perfcollection",
+            "com.amazon.perfc",
+            "com.amazon.client.metrics.api",
+            "com.amazon.hybridadidservice",
+            "com.amazon.kso.blackbird",
+            "com.amazon.wifilocker",
+            "com.amazon.tv.easyupgrade",
+            "com.amazon.tv.releasenotes",
+            "com.amazon.uxnotification",
+            "com.amazon.tv.acr",
+            "com.amazon.device.telemetry.emitter",
+            "com.amazon.ceviche",
+            "com.amazon.shoptv.client",
+            "com.amazon.shoptv.firetv.client",
+            "com.amazon.bueller.photos",
+            "com.amazon.bueller.music",
+            "com.amazon.gamehub",
+            "com.amazon.minitv.android.app",
+            "com.amazon.hedwig",
+            "com.amazon.tahoe",
+            "com.amazon.media.recommendations",
+            "com.amazon.tv.developer.dataservice",
+            "com.amazon.tv.livetv"
+        ]
+    },
     "general_meta": {
         "name": "Universal Facebook / Meta Bloatware",
         "packages": [
